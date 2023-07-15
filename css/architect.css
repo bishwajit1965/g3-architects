@@ -9,13 +9,16 @@
   font-family: "Work Sans", sans-serif;
 }
 :root {
-  --primary: #ff900e;
+  --primary-color: #ff900e;
+  --faded-color: #cacaca;
+  --orange-color: #f08205;
+  --deep-orange-color: #c36a04;
 }
 
 /* Heder styles */
 header {
   background-color: #fff4e7;
-  padding: 3rem 15rem;
+  padding: 3rem 10rem;
 }
 .brand-title {
   font-size: 1.5rem;
@@ -54,11 +57,53 @@ nav > ul > li > a {
 
 /* Shared styles */
 .btn-primary {
-  background-color: var(--primary);
+  background-color: var(--primary-color);
   border: none;
   color: #fff;
   border-radius: 5px;
   padding: 0.5rem 0.8rem;
+}
+.btn-primary:hover {
+  background-color: var(--deep-orange-color);
+}
+
+/* Quick features section styles */
+.quick-features {
+  display: flex;
+  padding: 3rem 10rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.feature-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+.feature-images {
+  width: 100%;
+}
+.feature-image {
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.decorated-text-color {
+  color: #ff900e;
+}
+.faded-title {
+  color: var(--faded-color);
+}
+.decorated-text {
+  color: var(--orange-color);
+}
+.section-description {
+  margin: 1rem 0rem;
+  font-size: 0.9rem;
 }
 
 /* Responsive media queries */
@@ -104,5 +149,26 @@ nav > ul > li > a {
     padding: 0rem;
     text-align: left;
     margin: 1rem 0rem;
+  }
+}
+
+/* Quick features area for smaller devices*/
+
+@media screen and (max-width: 576px) {
+  .quick-features {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .feature-images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 892px) {
+  .quick-features {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .feature-images {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
