@@ -186,11 +186,17 @@ nav > ul > li > a {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-
 }
 .sponsor-image {
   width: 100%;
   height: auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: #fff4e7;
+  padding: 3rem 10rem;
+  text-align: center;
 }
 
 /* Responsive media queries */
@@ -266,12 +272,24 @@ nav > ul > li > a {
   .enjoyable-features {
     flex-direction: column-reverse;
     padding: 0.5rem;
+    gap: 2rem;
+  }
+  .btn-promotion {
+    bottom: -1.5rem;
+    left: 0rem;
+    padding: 0.5rem 1rem;
+  }
+}
 
+@media screen and (min-width: 577px) and (max-width: 892px) {
+  .enjoyable-features {
+    padding: 0.5rem;
     gap: 2rem;
   }
   .btn-promotion {
     bottom: -1.8rem;
-    left: 0rem;
+    left: -1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -285,10 +303,33 @@ nav > ul > li > a {
   }
 }
 
+@media screen and (min-width: 577px) and (max-width: 892px) {
+  .some-facts {
+    padding: 0.5rem;
+  }
+  .box-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Sponsors section media queries */
 @media screen and (max-width: 576px) {
   .sponsors {
     padding: 0.5rem;
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 892px) {
+  .sponsors {
+    padding: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Footer media query styles */
+@media screen and (max-width: 576px) {
+  footer {
+    padding: 0.5rem;
   }
 }
