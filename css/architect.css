@@ -62,6 +62,7 @@ nav > ul > li > a {
   color: #fff;
   border-radius: 5px;
   padding: 0.5rem 0.8rem;
+  cursor: pointer;
 }
 .btn-primary:hover {
   background-color: var(--deep-orange-color);
@@ -87,7 +88,6 @@ nav > ul > li > a {
   width: 100%;
   height: auto;
 }
-
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -104,6 +104,93 @@ nav > ul > li > a {
 .section-description {
   margin: 1rem 0rem;
   font-size: 0.9rem;
+}
+
+/* Enjoyable features styles */
+.enjoyable-features {
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.enjoyable-feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-left: 0.3rem solid #f08205;
+  padding-left: 0.4rem;
+}
+.enjoyable-feature-description {
+  width: 90%;
+}
+.feature-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.feature-description {
+  font-size: 0.8rem;
+  width: 90%;
+}
+.description-box {
+  margin: 1rem 0rem;
+  box-shadow: 1px 2px 3px #ddd;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+}
+.architect-image {
+  width: 100%;
+  height: auto;
+}
+.feature-image-box {
+  position: relative;
+}
+.btn-promotion {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1rem 1.8rem;
+  position: absolute;
+  bottom: -1.8rem;
+  left: -2.5rem;
+}
+.btn-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Some facts section styles */
+.some-facts {
+  padding: 3rem 10rem;
+}
+.box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.box {
+  border: 0.1rem solid #ffdcb4;
+  border-radius: 0.3rem;
+  padding: 3.5rem 0.5rem;
+  text-align: center;
+}
+
+/* Sponsors section styles */
+.sponsors {
+  padding: 3rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+}
+.sponsor-image {
+  width: 100%;
+  height: auto;
 }
 
 /* Responsive media queries */
@@ -163,6 +250,7 @@ nav > ul > li > a {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+/* Quick features area for medium devices*/
 @media screen and (min-width: 577px) and (max-width: 892px) {
   .quick-features {
     flex-direction: column;
@@ -170,5 +258,37 @@ nav > ul > li > a {
   }
   .feature-images {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Enjoyable features media queries */
+@media screen and (max-width: 576px) {
+  .enjoyable-features {
+    flex-direction: column-reverse;
+    padding: 0.5rem;
+
+    gap: 2rem;
+  }
+  .btn-promotion {
+    bottom: -1.8rem;
+    left: 0rem;
+  }
+}
+
+/* Some facts media queries */
+@media screen and (max-width: 576px) {
+  .some-facts {
+    padding: 0.5rem;
+  }
+  .box-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Sponsors section media queries */
+@media screen and (max-width: 576px) {
+  .sponsors {
+    padding: 0.5rem;
+    grid-template-columns: 1fr;
   }
 }
